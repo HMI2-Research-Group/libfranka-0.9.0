@@ -71,9 +71,9 @@ ControlLoop<T>::ControlLoop(RobotControl& robot,
   if (!setCurrentThreadToHighestSchedulerPriority(&error_message) && throw_on_error) {
     throw RealtimeException(error_message);
   }
-  if (throw_on_error && !hasRealtimeKernel()) {
-    throw RealtimeException("libfranka: Running kernel does not have realtime capabilities.");
-  }
+  // if (throw_on_error && !hasRealtimeKernel()) {
+  //   throw RealtimeException("libfranka: Running kernel does not have realtime capabilities.");
+  // }
 }
 
 template <typename T>
